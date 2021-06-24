@@ -1,0 +1,164 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgb(214, 214, 214);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 10px;
+}
+.material-icons {
+    cursor: pointer;
+    margin: 0;
+    padding: 0;
+    width: 1.5vw;
+    user-select: none;
+}
+/* Conteúdo Principal */
+main {
+    display: grid;
+    margin-top: 2vh;
+    background-color: white;
+    height: 94vh;
+    width: 70vw;
+    border-radius: 10px;
+    box-shadow: 0px 30px 20px 2px #5a5a5a42;
+}
+/* Barra de pesquisa etc... */
+main .head {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px dotted rgb(255, 59, 59);
+}
+main .head #name {
+    font-size: calc(0.1rem + 1vw);
+    padding: 0.5rem;
+    outline: 0;
+    border: none;
+    border-bottom: 2px solid rgb(255, 59, 59);
+    background: none;
+}
+main .head #sub {
+    background-color: rgb(255, 59, 59);
+    color: white;
+    border: none;
+    padding: 0 5%;
+    margin-left: 5%;
+}
+main .head .search-case {
+    display: flex;
+    margin-left: 5%;
+}
+/* img */
+main .head #poke-logo {
+    height: 5vw;
+    margin-right: 5%;
+}
+main .pokemon {
+    height: 43vh;
+    display: flex;
+    width: 100%;
+    align-items: flex-end;
+    justify-content: center;
+}
+main .pokemon .pImgContent {
+    z-index: 2;
+    height: 100%;
+   /*  filter: brightness(.5) saturate(.5) invert(.5); */
+}
+/* Estilizando as abas */
+main #modify {
+    color: white;
+    width: 100%;
+    border-radius: 10px 50px 0 0;
+    font-size: calc(0.1rem + 1vw);
+    text-align: center;
+    display: flex;
+}
+main #modify .about {
+    padding: .5% 0;
+    height: 100%;
+    width: 15%;
+    cursor: pointer;
+    background-color: rgb(255, 59, 59);
+}
+main #modify .tabStats {
+    padding: .5% 0;
+    cursor: pointer;
+    height: 100%;
+    width: 15%;
+    color: white;
+    background-color: rgb(190, 2, 2);
+}
+main #modify .evolution {
+    padding: .5% 0;
+    cursor: pointer;
+    height: 100%;
+    width: 15%;
+    color: white;
+    background-color: rgb(190, 2, 2);
+}
+main #modify .desc {
+    padding: .5% 0;
+    cursor: pointer;
+    height: 100%;
+    width: 15%;
+    color: white;
+    background-color: rgb(190, 2, 2);
+    border-radius: 0 30px 0 0;
+}
+/* Onde ficará todas as infos do Pokémon */
+main .details {
+    height: 37vh;
+    width: 70vw;
+    color: white;
+    font-size: calc(0.5rem + 1vw);
+    background-color: rgb(255, 59, 59);
+    border-radius: 0 0 10px 10px;
+    letter-spacing: 1.5px;
+
+    display: flex;
+    justify-content: space-around;
+    overflow: auto;
+}
+.body, .pokeAttr, .more {
+    align-self: center;
+}
+main .details div {
+    margin-top: .7%;
+}
+main .details p:not(.weight, .height, .name, .abl,
+ .types, .id, .xp, .legendary, .color, .rate, .habitat) {
+    font-size: calc(0.1rem + .8vw);
+    margin-top: 5px;
+    color: rgb(231, 231, 231);
+}
+.weight, .height, 
+.name, .abl, .types, .id, .xp,
+.legendary, .color, .rate, .habitat {
+    margin-top: 5%;
+}
+/* Onde ficam as barras de progresso com os stats do pokémon */
+div .attr {
+    display: none;
+    justify-content: space-around;
+    width: 100%;
+    align-self: center;
+}
+div .attr .st1 p:not(.pTop),
+div .attr .st2 p:not(.pTop) {
+    margin-top: 12%;
+}
+label {
+    font-size: calc(.1rem + 1vw);
+}
+/* Rodapé */
+footer {
+    margin-top: 1.5vh;
+    font-size: calc(0.5rem + .5vw);
+}       

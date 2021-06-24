@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="toScript.css">
+    <link rel="shortcut icon" href="imgs/icon.png" type="image/x-icon">
+    <!-- Import material icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <title>Pokédex - Wikipédia dos Pokémons</title>
+</head>
+<body>
+    <main>
+        <div class="head">
+            <div class="search-case">
+                <input type="text" placeholder="Pokémon Name/Number" id="name" list="chosers"
+                autocomplete="off">
+                <input type="submit" id="sub" value="Ver Pokemon">
+
+                <datalist id="chosers">
+                </datalist>
+            </div>
+            <img src="imgs/pokeLogo.png" alt="Pokémon Logo" id="poke-logo">
+        </div>
+        <div class="pokemon">
+        </div>
+
+        <div id="modify">
+            <div class="about">About</div><div class="tabStats">Stats</div>
+            <div class="evolution">Evolutions</div><div class="desc">Description</div>
+        </div>
+        <div class="details">
+            <div class="body">
+                <p>Name</p><p class="name">Pokémon</p>
+                <p>Weight</p><p class="weight">00</p><p>Height</p><p class="height">00</p>
+                <p>Identification (ID)</p><p class="id">None</p>
+            </div>
+            <div class="pokeAttr">
+                <p>Abilitie(s)</p><p class="abl">None</p><p>Type(s)</p><p class="types">None</p>
+                <p>Esperience (xp)</p><p class="xp">00</p>
+            </div>
+            <div class="more">
+                <p>Color</p><p class="color">None</p><p>Legendary</p><p class="legendary">None</p>
+                <p>Capture Rate</p><p class="rate">00</p><p>Habitat</p><p class="habitat">None</p>
+            </div>
+            <div class="attr">
+                <div class="st1">
+                    <p class="pTop">Health Points (HP)</p>
+                    <progress id="hp" value="0" max="200"></progress> <label for="hp">00</label>
+                    <p>Attack</p>
+                    <progress id="attack" value="0" max="200"></progress> <label for="attack">00</label>
+                    <p>Defense</p>
+                    <progress id="defense" value="0" max="200"></progress> <label for="defense">00</label>
+                </div>
+                <div class="st2">
+                    <p class="pTop">Special Attack</p>
+                    <progress id="sAtk" value="0" max="200"></progress> <label for="sAtk">00</label>
+                    <p>Special Defense</p>
+                    <progress id="sDef" value="0" max="200"></progress> <label for="sDef">00</label>
+                    <p>Speed</p>
+                    <progress id="speed" value="0" max="200"></progress> <label for="speed">00</label>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copf; Willian 2021</p>
+    </footer>
+    <script src="pokedex.js"></script>
+</body>
+</html>
